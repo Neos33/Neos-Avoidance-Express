@@ -1,0 +1,2 @@
+objNeosAvoidanceController,0,0,00031047,0,1,1,4294967295,0,0
+playerStart,384,0,0000F323,0,1,1,4294967295,0,0

@@ -1,0 +1,18 @@
++music
+	|track01
+	|sndNull
+	|sndOnDeath
++sfx
+	|sndBlockChange
+	|sndBossHit
+	|sndCherry
+	|sndDeath
+	|sndDJump
+	|sndJump
+	|sndShoot
+	|sndSpikeTrap
+	|snd_wallum
+	|sndglass
+	|snditem
+	|sndbreak
+|musNeosAvoidance

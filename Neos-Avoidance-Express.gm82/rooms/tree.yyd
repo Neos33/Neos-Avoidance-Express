@@ -1,0 +1,19 @@
++init
+	|rInit
+	|rTitle
+	|rMenu
+	|rSelectStage
++sample
+	|rStage01
+	|roomboss
+	|roomend
+	|rStage02
+	|roommiku
+	|rMegaman01
+	|sampleroom01
+	|sampleroom02
+	|sampleroom03
+	|sampleroom04
+	|sampleroom05
++free
+|rNeosEndurance

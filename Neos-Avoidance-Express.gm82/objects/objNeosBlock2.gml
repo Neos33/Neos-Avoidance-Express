@@ -1,0 +1,72 @@
+#define Step_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+/// LiftBlock code
+//ƒŠƒtƒg‚Ì‚æ‚¤‚É“®‚©‚¹‚é‹C‚ª‚·‚éƒuƒƒbƒN
+//ƒLƒbƒhŒN‚Í‚±‚¢‚Â‚Ì“®‚«‚ÉŠ±Âo—ˆ‚Ü‚¹‚ñ
+//ƒLƒbƒhŒN‚ª‹²‚Ü‚ê‚é‚Æ‹l‚Þ‚Ì‚Å‹²‚Ü‚ê‚È‚¢‚Å‚­‚¾‚³‚¢
+
+if(!instance_exists(player))solid=0
+
+    if (!place_free(x+hspeed,y)) {
+        hspeed=-hspeed;
+    }
+    if (!place_free(x,y+vspeed)) {
+        vspeed=-vspeed;
+    }
+
+if(place_meeting(x+hspeed-player.hspeed,y,player)){
+
+    player.hspeed=hspeed
+
+}
+
+if(y>player.y){
+
+    if(place_meeting(x,y+vspeed-player.vspeed-1,player)){
+
+        player.hspeed+=hspeed
+
+        player.y=y-8
+        player.y+=vspeed+1
+        player.vspeed=vspeed
+        player.onPlatform=1
+        player.djump=1
+
+    }else if(place_meeting(x+hspeed-player.hspeed,y+vspeed-player.vspeed,player)){
+        player.hspeed=0
+    }
+
+}else{
+
+    if(place_meeting(x,y+vspeed-player.vspeed,player)){
+
+        if(vspeed<0){
+            player.vspeed=0
+        }else{
+            player.vspeed=vspeed
+        }
+
+    }else if(place_meeting(x+hspeed-player.hspeed,y+vspeed-player.vspeed,player)){
+        player.hspeed=0
+    }
+
+}
+#define Collision_bullet
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+/// Destroy bullet
+with other instance_destroy();
+#define Draw_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+scrNeosDrawNineSlice(bNeosTilesOutline, x, y, x + 32 * image_xscale, y + 32 * image_yscale);

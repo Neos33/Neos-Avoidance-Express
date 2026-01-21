@@ -1,0 +1,16 @@
+#define Create_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+image_speed=1/15;
+image_xscale=-1
+#define Other_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+//‰æ–ÊŠO‚Éo‚½‚çƒIƒuƒWƒFƒNƒg‚ðÁ‚·
+instance_destroy();
